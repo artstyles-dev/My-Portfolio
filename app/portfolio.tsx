@@ -13,7 +13,7 @@ const Portfolio = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-4xl font-bold">Hi, I'm Styles</h1>
+          <h1 className="text-4xl font-bold">Hi, Im Styles</h1>
           <p className="text-lg text-gray-300">
             Frontend Developer passionate about building smooth and interactive
             web experiences. Check out some of my projects below!
