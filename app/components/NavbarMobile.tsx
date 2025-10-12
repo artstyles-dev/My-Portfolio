@@ -16,6 +16,10 @@ const NavbarMobile = () => {
     document.getElementById("aboutme")?.scrollIntoView({behavior:"smooth"})
     setIsOpen(false)
   }
+  const handlePortfolio = ()=>{
+    document.getElementById("portfolio")?.scrollIntoView({behavior:"smooth"})
+    setIsOpen(false)
+  }
   const handleContact = ()=>{
     document.getElementById("contact")?.scrollIntoView({behavior:"smooth"})
     setIsOpen(false)
@@ -24,7 +28,7 @@ const NavbarMobile = () => {
   return (
     <div className="backdrop-blur-xs fixed left-0 w-full z-50 py-3">
       <div className=" flex justify-between">
-        <div className="px-3">Logo</div>
+        <div className="px-3">ArtStyles</div>
         <div>
             <button onClick={handleClick} className="px-4">
           <Menu />
@@ -40,7 +44,7 @@ const NavbarMobile = () => {
       >
         <p onClick={handleHome}>Home</p>
         <p onClick={handleAbout}>About Me</p>
-        <p>Portfolio</p>
+        <p onClick={handlePortfolio}>Portfolio</p>
         <p onClick={handleContact}>Contact</p>
       </div>
     </div>
