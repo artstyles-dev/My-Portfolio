@@ -26,9 +26,9 @@ const NavbarMobile = () => {
   }
 
   return (
-    <div className="backdrop-blur-xs fixed left-0 w-full z-50 py-3">
+    <div className="backdrop-blur-xl fixed left-0 w-full z-50 py-3">
       <div className=" flex justify-between">
-        <div className="px-3">ArtStyles</div>
+        <div className="px-3 text-xl">ArtStyles</div>
         <div>
             <button onClick={handleClick} className="px-4">
           <Menu />

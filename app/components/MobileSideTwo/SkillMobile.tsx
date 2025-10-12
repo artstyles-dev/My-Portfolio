@@ -7,16 +7,16 @@ const SkillMobile = () => {
       skills: ["HTML", "CSS", "JavaScript", "TypeScript"],
     },
     {
-      title: "Frameworks",
+      title: "Framework & Library",
       skills: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap" , "Shadcn UI"],
     },
     {
       title: "Database",
-      skills: ["MySQL" , "PostgreSQL"],
+      skills: ["MySQL" , "PostgreSQL" , "Supabase"],
     },
     {
       title: "Tools",
-      skills: ["Git / GitHub", "VS Code", "Figma"],
+      skills: ["Git / GitHub", "VS Code", "Figma" , "Postman"],
     },
   ];
   return (

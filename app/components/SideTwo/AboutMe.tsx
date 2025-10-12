@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutMe = () => {
   return (
-    <div className="h-full md:p-10 lg:p-20 xl:p-30 overflow-y-scroll">
-      <div className="h-full flex flex-col justify-center xl:justify-start items-center">
+    <div className="h-screen md:pl-10 lg:pl-10 xl:pl-20 overflow-y-scroll">
+      <div className="h-full flex flex-col justify-center xl:justify-center items-center">
         <h1 className="text-5xl xl:text-6xl font-bold text-center mb-5">About Me</h1>
         <div>
           <p className="leading-relaxed mb-2">
@@ -16,17 +16,6 @@ const AboutMe = () => {
             ผมให้ความสำคัญกับการออกแบบประสบการณ์ผู้ใช้ (UX/UI)
             และชอบทดลองเทคโนโลยีใหม่ ๆ
             เพื่อนำมาใช้พัฒนาเว็บไซต์ให้ทันสมัยอยู่เสมอ
-          </p>
-        </div>
-
-        <div className="hidden xl:block leading-relaxed">
-          <p>
-            มุ่งมั่นที่จะพัฒนาทักษะการเขียนโค้ด และสร้างผลงานที่มีคุณภาพ
-            เพื่อเติบโตในสายอาชีพ{" "}
-            <span className="text-amber-300 text-2xl font-semibold">
-              Frontend Developer
-            </span>{" "}อย่างมืออาชีพ
-            และสร้างเว็บไซต์ที่คนอยากใช้งานจริง
           </p>
         </div>
       </div>

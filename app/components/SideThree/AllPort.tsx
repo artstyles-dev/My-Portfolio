@@ -13,7 +13,7 @@ const AllPort = () => {
 
     const swiperRef = useRef<SwiperType | null>(null);
   return (
-    <div className="glassPopup overflow-hidden p-10">
+    <div className="glassPopup w-100 md:w-full overflow-hidden p-10">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

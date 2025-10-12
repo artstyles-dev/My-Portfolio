@@ -7,23 +7,23 @@ const Skill = () => {
       skills: ["HTML", "CSS", "JavaScript", "TypeScript"],
     },
     {
-      title: "Frameworks",
+      title: "Framework & Library",
       skills: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap" , "Shadcn UI" ],
     },
     {
       title: "Database",
-      skills: ["MySQL" , "PostgreSQL"],
+      skills: ["MySQL" , "PostgreSQL" , "Supabase"],
     },
     {
       title: "Tools",
-      skills: ["Git / GitHub", "VS Code" , "Figma"],
+      skills: ["Git / GitHub", "VS Code" , "Figma" , "Postman"],
     },
   ];
 
   return (
-    <div className="h-full md:p-10 lg:py-30 lg:px-5 xl:py-30 xl:px-10 2xl:p-30">
-      <div className="h-full flex flex-col justify-start items-center">
-        <h1 className="text-5xl xl:text-6xl font-bold text-center mb-5">My Skills</h1>
+    <div className="h-full md:p-10 lg:py-30 lg:px-5 xl:py-30 xl:px-20 2xl:p-30">
+      <div className="h-full flex flex-col justify-center items-center">
+        {/* <h1 className="text-5xl xl:text-6xl font-bold text-center mb-5">My Skills</h1> */}
 
         <div className="grid grid-cols-2 gap-5">
           {skillCategories.map((item, index) => (

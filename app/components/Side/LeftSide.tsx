@@ -14,6 +14,7 @@ const LeftSide = () => {
           </span>{" "}
             ออกแบบและพัฒนาเว็บไซต์ให้ใช้งานง่าย ดูสวยงาม และสร้างประสบการณ์ที่ดีให้กับผู้ใช้ 
           </p>
+          <a href="/Jirut_CV.pdf" target="_blank" className="glass px-3 py-1">Download CV</a>
         </div>
       </div>
     </div>

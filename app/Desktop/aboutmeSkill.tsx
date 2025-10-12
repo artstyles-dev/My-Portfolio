@@ -7,10 +7,10 @@ const AboutmeSkill = () => {
   return (
     <div className="flex justify-center items-center">
       <div className="flex">
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-5">
           {/* Left Side */}
         <motion.div
-          className="text-white text-xl"
+          className="text-white text-xl col-span-2"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -19,7 +19,7 @@ const AboutmeSkill = () => {
         </motion.div>
           {/* Right Side */}
         <motion.div
-          className="text-white text-xl"
+          className="text-white text-xl col-span-3"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
