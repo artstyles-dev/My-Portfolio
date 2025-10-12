@@ -8,7 +8,7 @@ const Skill = () => {
     },
     {
       title: "Frameworks",
-      skills: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap"],
+      skills: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap" , "Shadcn UI" ],
     },
     {
       title: "Database",
@@ -31,14 +31,14 @@ const Skill = () => {
               key={index}
               className="glassPopup"
             >
-              <h2 className="text-2xl xl:text-3xl font-semibold text-center text-amber-400 p-3 overflow-hidden">
+              <h2 className="text-xl xl:text-2xl font-semibold text-center text-amber-400 p-3 overflow-hidden">
                 {item.title}
               </h2>
               <div className="flex flex-wrap justify-center gap-3 p-3 mb-1">
                 {item.skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="text-lg xl:text-xl glass px-2 xl:px-4 py-2"
+                    className="text-sm xl:text-lg glass px-2 xl:px-4 py-2"
                   >
                     {skill}
                   </span>

@@ -8,7 +8,7 @@ const SkillMobile = () => {
     },
     {
       title: "Frameworks",
-      skills: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap"],
+      skills: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap" , "Shadcn UI"],
     },
     {
       title: "Database",
