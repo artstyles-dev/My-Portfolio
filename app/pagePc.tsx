@@ -1,10 +1,10 @@
 'use client'
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
-import Home from "./home";
-import AboutmeSkill from "./aboutmeSkill";
-import Contact from "./contact";
-import Portfolio from "./portfolio";
+import Home from "./Desktop/home";
+import AboutmeSkill from "./Desktop/aboutmeSkill";
+import Contact from "./Desktop/contact";
+import Portfolio from "./Desktop/portfolio";
 
 const PagePc = () => {
 

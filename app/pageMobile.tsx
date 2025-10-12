@@ -1,8 +1,9 @@
 import React from 'react'
-import HomeMobile from './homeMobile'
-import AboutmeMobile from './aboutmeMobile'
+import HomeMobile from './Mobile/homeMobile'
+import AboutmeMobile from './Mobile/aboutmeMobile'
 import NavbarMobile from './components/NavbarMobile'
-import ContactMobile from './contactMobile'
+import ContactMobile from './Mobile/contactMobile'
+import PortfolioMobile from './Mobile/portfolioMobile'
 
 const PageMobile = () => {
   return (
@@ -10,6 +11,7 @@ const PageMobile = () => {
       <NavbarMobile />
       <HomeMobile />
       <AboutmeMobile />
+      <PortfolioMobile />
       <ContactMobile />
     </div>
   )

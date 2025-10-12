@@ -1,6 +1,6 @@
 import React from 'react'
-import AboutMeMobile from './components/MobileSideTwo.tsx/AboutMeMobile'
-import SkillMobile from './components/MobileSideTwo.tsx/SkillMobile'
+import AboutMeMobile from '../components/MobileSideTwo/AboutMeMobile'
+import SkillMobile from '../components/MobileSideTwo/SkillMobile'
 
 const AboutmeMobile = () => {
   return (

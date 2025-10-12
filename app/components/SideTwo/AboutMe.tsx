@@ -2,14 +2,10 @@ import React from "react";
 
 const AboutMe = () => {
   return (
-    <div className="h-full md:p-10 lg:p-20 xl:p-30">
-      <div className="h-full flex flex-col justify-start items-center">
+    <div className="h-full md:p-10 lg:p-20 xl:p-30 overflow-y-scroll">
+      <div className="h-full flex flex-col justify-center xl:justify-start items-center">
         <h1 className="text-5xl xl:text-6xl font-bold text-center mb-5">About Me</h1>
         <div>
-          <p className="text-3xl font-semibold mb-2">
-            สวัสดีครับ ผมชื่อ อาร์ต ( จิรัฐ บุญให้ )
-          </p>
-
           <p className="leading-relaxed mb-2">
             ผมมีความสนใจในการพัฒนาเว็บไซต์และเว็บแอปพลิเคชั่น
             ในตำแหน่ง{" "}
@@ -22,9 +18,8 @@ const AboutMe = () => {
             เพื่อนำมาใช้พัฒนาเว็บไซต์ให้ทันสมัยอยู่เสมอ
           </p>
         </div>
-{/* 
-        <div className="leading-relaxed">
-          <h2 className="text-3xl font-semibold mb-2">เป้าหมายของผม</h2>
+
+        <div className="hidden xl:block leading-relaxed">
           <p>
             มุ่งมั่นที่จะพัฒนาทักษะการเขียนโค้ด และสร้างผลงานที่มีคุณภาพ
             เพื่อเติบโตในสายอาชีพ{" "}
@@ -33,7 +28,7 @@ const AboutMe = () => {
             </span>{" "}อย่างมืออาชีพ
             และสร้างเว็บไซต์ที่คนอยากใช้งานจริง
           </p>
-        </div> */}
+        </div>
       </div>
     </div>
   );

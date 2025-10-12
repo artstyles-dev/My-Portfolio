@@ -1,6 +1,6 @@
 import React from 'react'
-import Pic from './components/MobileSide.tsx/Pic'
-import Hero from './components/MobileSide.tsx/Hero'
+import Pic from '../components/MobileSide/Pic'
+import Hero from '../components/MobileSide/Hero'
 
 const  HomeMobile = () => {
   return (

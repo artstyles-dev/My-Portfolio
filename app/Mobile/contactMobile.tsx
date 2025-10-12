@@ -1,5 +1,5 @@
 import React from 'react'
-import Contact from './components/MobileSideThree.tsx/Contact'
+import Contact from '../components/MobileSideThree/Contact'
 
 const ContactMobile = () => {
   return (
