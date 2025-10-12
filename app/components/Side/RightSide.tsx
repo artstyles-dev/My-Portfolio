@@ -11,7 +11,7 @@ const RightSide = () => {
           alt="profile"
           width={520}
           height={520}
-          className="object-cover absolute rounded-b-full w-40 h-44 sm:w-60 sm:h-64 md:w-60 md:h-80 lg:w-[440px] lg:h-[480px] bottom-0"
+          className="object-cover absolute rounded-b-full w-40 h-44 sm:w-60 sm:h-64 md:w-60 md:h-70 lg:w-[440px] lg:h-[480px] bottom-0"
         />
       </div>
     </div>

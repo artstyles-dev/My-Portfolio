@@ -12,7 +12,7 @@ const SkillMobile = () => {
     },
     {
       title: "Database",
-      skills: ["Firebase", "MySQL"],
+      skills: ["MySQL" , "PostgreSQL"],
     },
     {
       title: "Tools",

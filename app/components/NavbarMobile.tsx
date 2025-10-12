@@ -34,7 +34,7 @@ const NavbarMobile = () => {
       </div>
 
       <div
-        className={`px-4 overflow-hidden flex flex-col justify-end items-end transition-all duration-300 ease-in-out ${
+        className={`px-4 text-2xl font-bold space-y-2 overflow-hidden flex flex-col justify-end items-end transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
         }`}
       >

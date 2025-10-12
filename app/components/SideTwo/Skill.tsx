@@ -12,11 +12,11 @@ const Skill = () => {
     },
     {
       title: "Database",
-      skills: ["MySQL"],
+      skills: ["MySQL" , "PostgreSQL"],
     },
     {
       title: "Tools",
-      skills: ["Git / GitHub", "VS Code"],
+      skills: ["Git / GitHub", "VS Code" , "Figma"],
     },
   ];
 

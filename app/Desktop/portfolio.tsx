@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import TodoList from "../components/SideThree/TodoList";
 import PcEcom from "../components/SideThree/PcEcom";
 import Restaurants from "../components/SideThree/Restaurants";
-import AllPort from "../components/SideThree/Restaurant";
+import AllPort from "../components/SideThree/AllPort";
 
 const Portfolio = () => {
   return (

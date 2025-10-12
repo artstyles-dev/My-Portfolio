@@ -45,7 +45,7 @@ const Contact = () => {
         setStatus(data.message);
       };
   return (
-        <div className="h-full my-10">
+        <div className="h-full my-10 mt-20">
       {/* Left: Form */}
       <div className="h-full flex flex-col mb-5">
         <h1 className="text-3xl font-bold mb-5">
