@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef } from "react";
+import { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -7,8 +8,10 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
 
+
 const AllPort = () => {
-  const swiperRef = useRef<any>(null);
+
+    const swiperRef = useRef<SwiperType | null>(null);
   return (
     <div className="glassPopup overflow-hidden p-10">
       <Swiper
