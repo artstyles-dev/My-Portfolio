@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMe = () => {
   return (
-    <div className="h-screen md:pl-10 lg:pl-10 xl:pl-20 overflow-y-scroll">
+    <div className="h-screen md:pl-10 lg:pl-10 xl:pl-20">
       <div className="h-full flex flex-col justify-center xl:justify-center items-center">
         <h1 className="text-5xl xl:text-6xl font-bold text-center mb-5">About Me</h1>
         <div>
