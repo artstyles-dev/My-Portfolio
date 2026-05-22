@@ -2,6 +2,7 @@ import React from "react";
 import PcEcom from "../SideThree/PcEcom";
 import Restaurants from "../SideThree/Restaurants";
 import TodoList from "../SideThree/TodoList";
+import WorkExperience from "../SideThree/WorkExperience";
 
 const PortfolioM = () => {
   return (
@@ -9,14 +10,17 @@ const PortfolioM = () => {
       <h1 className="mt-20 text-3xl font-bold mb-5">Portfolio</h1>
       <div className="space-y-5">
         <div className="glass">
-        <PcEcom />
-      </div>
-      <div className="glass">
-        <Restaurants />
-      </div>
-      <div className="glass">
-        <TodoList />
-      </div>
+          <PcEcom />
+        </div>
+        <div className="glass">
+          <Restaurants />
+        </div>
+        <div className="glass">
+          <TodoList />
+        </div>
+        <div className="glass">
+          <WorkExperience />
+        </div>
       </div>
     </div>
   );
