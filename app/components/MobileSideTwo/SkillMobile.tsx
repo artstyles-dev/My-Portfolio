@@ -3,25 +3,29 @@ import React from 'react'
 const SkillMobile = () => {
       const skillCategories = [
     {
-      title: "Languages",
-      skills: ["HTML", "CSS", "JavaScript", "TypeScript"],
+      title: "Programming Languages",
+      skills: ["JavaScript", "TypeScript", "HTML", "CSS", "SQL"],
     },
     {
-      title: "Framework & Library",
-      skills: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap" , "Shadcn UI" , "React Native" , "Express.js" , "Node.js" , "Redux Toolkit" , "Zustand"],
+      title: "Frontend Development",
+      skills: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap", "Shadcn UI", "React Native"],
     },
     {
-      title: "Database",
-      skills: ["MySQL" , "PostgreSQL" , "Supabase"],
+      title: "State Management",
+      skills: ["Redux Toolkit", "Zustand"],
     },
     {
-      title: "Tools",
-      skills: ["Git / GitHub", "VS Code", "Figma" , "Postman"],
+      title: "Backend & Databases",
+      skills: ["Node.js", "Express.js", "RESTful API", "PostgreSQL", "MySQL", "Supabase"],
+    },
+    {
+      title: "Development Tools",
+      skills: ["Git", "GitHub", "Postman", "Figma", "VS Code", "Docker", "ClickUp", "Trello"],
     },
   ];
   return (
     <div className="h-full">
-      <div className="h-full flex flex-col">
+      <div className="h-full flex flex-col mt-10">
         <div className="grid grid-cols-2 gap-5">
           {skillCategories.map((item, index) => (
             <div

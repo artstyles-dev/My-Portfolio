@@ -12,7 +12,7 @@ const LeftSide = () => {
           <span className="text-amber-300 text-3xl font-semibold">
             Frontend Developer
           </span>{" "}
-            ออกแบบพัฒนาเว็บไซต์และแอปพลิเคชั่นให้ใช้งานง่าย ดูสวยงาม และสร้างประสบการณ์ที่ดีให้กับผู้ใช้ 
+            ออกแบบพัฒนาเว็บไซต์และแอปพลิเคชั่นให้ใช้งานง่าย ดูสวยงาม และสร้างประสบการณ์ที่ดีให้กับผู้ใช้งาน
           </p>
           <a href="/Jirut_CV.pdf" target="_blank" className="glass px-3 py-1">Download CV</a>
         </div>

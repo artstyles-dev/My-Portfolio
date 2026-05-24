@@ -15,7 +15,7 @@ const Contact = () => {
         if (!name.trim() || !email.trim() || !message.trim()) {
           toast("กรุณากรอกข้อมูลให้ครบถ้วน", {
             style: {
-              background: "rgba(255, 255, 255, 255)", // จาก .glassPopup
+              background: "rgba(255, 255, 255, 255)", 
               backdropFilter: "blur(1px) saturate(180%)",
               borderRadius: "2rem",
               boxShadow:

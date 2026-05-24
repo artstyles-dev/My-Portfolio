@@ -16,7 +16,7 @@ const PagePc = () => {
         <Navbar activePage={activePage} setActivePage={setActivePage} />
         <div className="flex justify-center items-center">
           {activePage === "home" && <Home />}
-          {activePage === "aboutme" && <AboutmeSkill />}
+          {activePage === "skills" && <AboutmeSkill />}
           {activePage === "portfolio" && <Portfolio />}
           {activePage === "contact" && <Contact />}
         </div>

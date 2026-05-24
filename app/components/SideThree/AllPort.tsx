@@ -40,16 +40,16 @@ const AllPort = () => {
         onSwiper={(swiper) => (swiperRef.current = swiper)}
       >
         <SwiperSlide>
-          <Restaurants />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TodoList />
+          <WorkExperience />
         </SwiperSlide>
         <SwiperSlide>
           <PcEcom />
         </SwiperSlide>
         <SwiperSlide>
-          <WorkExperience />
+          <TodoList />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Restaurants />
         </SwiperSlide>
       </Swiper>
       <div className="mt-6 flex justify-center gap-4">

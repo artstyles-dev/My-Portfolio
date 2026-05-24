@@ -26,7 +26,8 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <Restaurants />
+            <WorkExperience />
+            
           </motion.div>
           {/* Right Side */}
           <motion.div
@@ -35,7 +36,7 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <TodoList />
+            <PcEcom />
           </motion.div>
           {/* Side */}
           <motion.div
@@ -44,7 +45,7 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <PcEcom />
+            <TodoList />
           </motion.div>
           <motion.div
             className="text-white text-xl hover:scale-105 transform duration-300"
@@ -52,7 +53,7 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <WorkExperience />
+            <Restaurants />
           </motion.div>
         </div>
       </div>

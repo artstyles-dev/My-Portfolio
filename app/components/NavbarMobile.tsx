@@ -13,7 +13,7 @@ const NavbarMobile = () => {
     setIsOpen(false)
   }
   const handleAbout = ()=>{
-    document.getElementById("aboutme")?.scrollIntoView({behavior:"smooth"})
+    document.getElementById("skills")?.scrollIntoView({behavior:"smooth"})
     setIsOpen(false)
   }
   const handlePortfolio = ()=>{
@@ -43,7 +43,7 @@ const NavbarMobile = () => {
         }`}
       >
         <p onClick={handleHome}>Home</p>
-        <p onClick={handleAbout}>About Me</p>
+        <p onClick={handleAbout}>Skills</p>
         <p onClick={handlePortfolio}>Portfolio</p>
         <p onClick={handleContact}>Contact</p>
       </div>

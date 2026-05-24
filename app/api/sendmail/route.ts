@@ -1,5 +1,4 @@
 
-// app/api/sendmail/route.ts
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
