@@ -10,7 +10,7 @@ interface NavProps {
 const Navbar = ({ activePage, setActivePage }: NavProps) => {
   const menuItems = [
     { label: "Home", page: "home" },
-    { label: "About Me & Skill", page: "aboutme" },
+    { label: "Skills", page: "skills" },
     { label: "Portfolio", page: "portfolio" },
     { label: "Contact", page: "contact" },
   ];

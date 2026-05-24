@@ -1,28 +1,28 @@
 import React from "react";
-import Image from "next/image";
 
 const TodoList = () => {
   return (
-    <div className="flex justify-center items-center">
-      <div className="glassPopup flex flex-col items-center shadow-lg rounded-xl p-6 max-w-md">
-        <div className="w-full overflow-hidden rounded-2xl shadow-md mb-4">
-          <a href="https://todolist-doitnow.vercel.app/" target="_blank">
-            <Image
-              src="https://res.cloudinary.com/dzjiwk7yy/image/upload/v1760115975/%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%96%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%88%E0%B8%AD_2568-10-10_%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2_14.54.48_ww6oxv.jpg"
-              alt="web-ecom"
-              width={1280}
-              height={720}
-              className="object-cover w-full h-64 hover:opacity-70 transition-opacity duration-300"
-            />
-          </a>
-        </div>
-        <div className="p-4">
-          <h1 className="text-2xl text-amber-300 font-bold">
+    <div className="flex h-full items-center justify-center">
+      <div className="glassPopup flex h-full max-w-md flex-col justify-center rounded-xl p-2 shadow-lg">
+        <div className="space-y-4 p-4">
+          <p className="text-sm font-semibold uppercase tracking-wider text-amber-200">
+            Frontend Practice Project
+          </p>
+          <h1 className="text-xl font-bold text-amber-300">
             Todo List Web App
           </h1>
-          <p className="hidden xl:block">
-            แอปจัดการรายการ Todo เพิ่ม ลบ แก้ไข
-            และทำเครื่องหมายรายการที่เสร็จแล้ว
+          <p className="text-sm leading-relaxed text-white/85 xl:text-base">
+            A responsive To-Do List application built with
+Next.js and TailwindCSS.Users can add, delete,
+edit tasks, and mark tasks as completed.All
+data is stored in LocalStorage, ensuring tasks
+persist across page reloads.The project
+emphasizes clean UI, state management, and
+practical use of modern React patterns.
+          </p>
+          <p className="text-sm text-white/75">
+            <span className="font-semibold text-amber-200">Tech:</span> React,
+            Tailwind CSS, LocalStorage
           </p>
         </div>
       </div>
