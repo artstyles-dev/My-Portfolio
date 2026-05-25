@@ -8,8 +8,16 @@ const Restaurants = () => {
           <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
             Practice Project
           </p>
-          <h1 className="text-xl font-bold text-slate-950">
-            Restaurant Menu Web
+          <h1 className="flex flex-wrap items-center gap-2 text-xl font-bold text-slate-950">
+            <span>Restaurant Menu Web</span>
+            <a
+              href="https://myrestaurant-styles.vercel.app/"
+              target="_blank"
+              rel="noreferrer"
+              className="items-center text-xs font-semibold uppercase tracking-[0.18em] text-blue-600 transition"
+            >
+              Demo
+            </a>
           </h1>
           <p className="text-sm leading-relaxed text-slate-600 xl:text-base">
             A restaurant website showcasing menus and
@@ -31,3 +39,5 @@ interface.
 };
 
 export default Restaurants;
+
+
