@@ -3,14 +3,14 @@ import Image from "next/image";
 
 const RightSide = () => {
   return (
-    <div className="flex justify-center items-center h-full">
-      <div className="relative h-40 w-40 sm:h-60 sm:w-60 md:h-60 md:w-60 lg:h-[440px] lg:w-[440px] shadow-xl transfrom duration-300 hover:shadow-2xl shadow-white rounded-full overflow-visible flex items-center justify-center bg-gradient-to-b to-transparent from-white">
+    <div className="flex h-full items-center justify-center">
+      <div className="relative flex h-40 w-40 items-center justify-center overflow-visible rounded-full border border-white bg-gradient-to-b from-white to-blue-50 shadow-[0_30px_90px_rgba(37,99,235,0.16)] sm:h-60 sm:w-60 md:h-60 md:w-60 lg:h-[420px] lg:w-[420px]">
         <Image
           src="https://res.cloudinary.com/dzjiwk7yy/image/upload/v1759833758/IMG_2418-Photoroom_ef44bz.png"
           alt="profile"
           width={520}
           height={520}
-          className="object-cover absolute rounded-b-full w-40 h-44 sm:w-60 sm:h-64 md:w-60 md:h-70 lg:w-[440px] lg:h-[480px] bottom-0"
+          className="absolute bottom-0 h-44 w-40 rounded-b-full object-cover sm:h-64 sm:w-60 md:h-70 md:w-60 lg:h-[460px] lg:w-[420px]"
         />
       </div>
     </div>
@@ -18,4 +18,3 @@ const RightSide = () => {
 };
 
 export default RightSide;
-

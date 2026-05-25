@@ -25,21 +25,25 @@ const SkillMobile = () => {
   ];
   return (
     <div className="h-full">
-      <div className="h-full flex flex-col mt-10">
-        <div className="grid grid-cols-2 gap-5">
+      <div className="mt-16 flex h-full flex-col">
+        <div className="mb-6">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">Skills & Tech</p>
+          {/* <h1 className="mt-2 text-3xl font-bold text-slate-950">เครื่องมือที่ใช้สร้างงาน</h1> */}
+        </div>
+        <div className="grid grid-cols-1 gap-4 min-[430px]:grid-cols-2">
           {skillCategories.map((item, index) => (
             <div
               key={index}
-              className="glassPopup"
+              className="glassPopup overflow-hidden"
             >
-              <h2 className="text-2xl font-semibold text-center text-amber-400 p-3 overflow-hidden">
+              <h2 className="border-b border-slate-200 p-3 text-center text-lg font-semibold text-slate-950">
                 {item.title}
               </h2>
               <div className="flex flex-wrap justify-center gap-3 p-3 mb-1">
                 {item.skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="text-lg glass px-2 py-2"
+                    className="rounded-full border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700"
                   >
                     {skill}
                   </span>

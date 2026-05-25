@@ -29,11 +29,11 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div className="flex justify-center items-center">
-      <div className="flex flex-col lg:grid grid-cols-2">
+    <div className="flex h-full w-full items-center justify-center">
+      <div className="grid w-full max-w-6xl grid-cols-2 items-center gap-10">
         {/* Left Side - Intro */}
         <motion.div
-          className="text-white text-xl"
+          className="text-xl"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -43,7 +43,7 @@ const Home = () => {
 
         {/* Right Side - Projects */}
         <motion.div
-          className="text-white text-xl"
+          className="text-xl"
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}

@@ -35,9 +35,13 @@ const Skill = () => {
   ];
 
   return (
-    <div className="min-h-full w-full flex flex-col items-center justify-center px-4 pt-28 pb-10 md:px-10 md:pt-32 lg:pt-36 xl:pt-40">
+    <div className="flex min-h-full w-full flex-col items-center justify-center px-6 pb-10 md:px-10">
       
-      <div className="w-full max-w-6xl">
+      <div className="mx-auto w-full max-w-6xl">
+        <div className="mb-10 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">Skills & Tech</p>
+          {/* <h1 className="mt-3 text-2xl font-bold text-slate-950 xl:text-5xl">เครื่องมือที่ใช้สร้างงาน</h1> */}
+        </div>
         
         <div className="block lg:hidden w-full">
           <Swiper
@@ -61,12 +65,12 @@ const Skill = () => {
             {skillCategories.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="glassPopup flex flex-col h-full min-h-[300px]">
-                  <h2 className="text-xl font-semibold text-center text-amber-400 p-4 border-b border-white/10">
+                  <h2 className="border-b border-slate-200 p-4 text-center text-xl font-semibold text-slate-950">
                     {item.title}
                   </h2>
                   <div className="flex flex-wrap justify-center gap-2 p-6">
                     {item.skills.map((skill, idx) => (
-                      <span key={idx} className="text-sm glass px-3 py-2 rounded-lg">
+                      <span key={idx} className="rounded-full border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700">
                         {skill}
                       </span>
                     ))}
@@ -79,13 +83,13 @@ const Skill = () => {
           {/* ปุ่ม Navigation สำหรับ Mobile */}
           <div className="mt-6 flex justify-center gap-4">
         <button
-          className="glass px-4 py-2 font-semibold"
+          className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm"
           onClick={() => swiperRef.current?.slidePrev()}
         >
           Prev
         </button>
         <button
-          className="glass px-4 py-2 font-semibold"
+          className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm"
           onClick={() => swiperRef.current?.slideNext()}
         >
           Next
@@ -94,20 +98,20 @@ const Skill = () => {
         </div>
 
         {/* --- DESKTOP VIEW: Flex Grid (แสดงเฉพาะจอ md ขึ้นไป) --- */}
-        <div className="hidden lg:flex flex-wrap justify-center gap-6 -mt-20">
+        <div className="hidden flex-wrap justify-center gap-5 lg:flex">
           {skillCategories.map((item, index) => (
             <div
               key={index}
-              className="glassPopup flex flex-col w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] max-w-[400px]"
+              className="glassPopup flex w-full max-w-[390px] flex-col overflow-hidden sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
             >
-              <h2 className="text-xl xl:text-2xl font-semibold text-center text-amber-400 p-4 border-b border-white/10">
+              <h2 className="border-b border-slate-200 p-4 text-center text-xl font-semibold text-slate-950 xl:text-2xl">
                 {item.title}
               </h2>
               <div className="flex flex-wrap justify-center gap-3 p-5">
                 {item.skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="text-sm xl:text-base glass px-3 py-2 rounded-lg"
+                    className="rounded-full border border-slate-200 bg-white px-3 py-2 text-sm text-slate-700 xl:text-base"
                   >
                     {skill}
                   </span>

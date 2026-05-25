@@ -3,8 +3,8 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Art Portfolio",
-  description: "Portfolio",
+  title: "Jirut Boonhai | Frontend Developer",
+  description: "Clean portfolio website for Jirut Boonhai.",
 };
 
 export default function RootLayout({
@@ -14,8 +14,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="sm:container sm:overflow-hidden sm:h-[100dvh] sm:mx-auto sm:py-10 sm:flex sm:items-center sm:justify-center">
-        <div className="h-full flex justify-center items-center overflow-hidden glassPopup">
+      <body className="sm:overflow-hidden sm:h-[100dvh] sm:flex sm:items-center sm:justify-center">
+        <div className="h-full w-full sm:h-[calc(100dvh-48px)] sm:w-[min(1440px,calc(100vw-48px))] flex justify-center items-center overflow-hidden sm:rounded-[28px] sm:border sm:border-slate-200/80 sm:bg-white/55 sm:shadow-[0_30px_90px_rgba(15,23,42,0.12)] sm:backdrop-blur-2xl">
           {children}
           <Toaster position="top-center" reverseOrder={false} />
         </div>

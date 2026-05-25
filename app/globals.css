@@ -1,141 +1,86 @@
 @import "tailwindcss";
 
+:root {
+  --background: #f7f8fb;
+  --foreground: #111827;
+  --muted: #64748b;
+  --line: rgba(15, 23, 42, 0.1);
+  --card: rgba(255, 255, 255, 0.78);
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #000212; /* พื้นหลังกลางคืน */
-  background-image:
-    radial-gradient(circle at 10% 20%, rgb(0, 10, 10) 2px, transparent 30%),
-    radial-gradient(circle at 30% 40%, rgb(9, 0, 5) 2px, transparent 30%),
-    radial-gradient(circle at 50% 25%, rgb(0, 6, 14) 2px, transparent 25%),
-    radial-gradient(circle at 70% 60%, rgb(12, 12, 0) 2px, transparent 25%),
-    radial-gradient(circle at 90% 35%, rgb(11, 0, 0) 2px, transparent 25%),
-    radial-gradient(circle at 10% 75%, rgb(12, 0, 0) 2px, transparent 25%);
-  background-size: cover;
-  background-repeat: repeat;
+  min-height: 100dvh;
+  margin: 0;
+  color: var(--foreground);
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.1), transparent 32%),
+    linear-gradient(315deg, rgba(20, 184, 166, 0.1), transparent 30%),
+    var(--background);
+  font-feature-settings: "kern";
 }
 
-@media (min-width: 640px) {
-body {
-  background-color: #070012; /* พื้นหลังกลางคืน */
-  background-image:
-    radial-gradient(circle at 10% 20%, rgba(16, 119, 133, 0.661) 2px, transparent 30%),
-    radial-gradient(circle at 30% 40%, rgba(155, 16, 90, 0.6) 2px, transparent 30%),
-    radial-gradient(circle at 50% 25%, rgba(150,200,255,0.5) 2px, transparent 25%),
-    radial-gradient(circle at 70% 60%, rgba(255,255,180,0.4) 2px, transparent 25%),
-    radial-gradient(circle at 90% 35%, rgba(255,150,150,0.3) 2px, transparent 25%),
-    radial-gradient(circle at 10% 75%, rgba(255,150,150,0.3) 2px, transparent 25%);
-  background-size: cover;
-  background-repeat: repeat;
-}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
-
-
-.glass {
-  position: relative;
-  background: rgba(255, 255, 255, 0.057);
-  backdrop-filter: blur(2px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.179);
-  border-radius: 2rem;
-  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.124),
-    inset 0 4px 20px rgba(255, 255, 255, 0.278);
-  transition: all 0.4s ease;
+::selection {
+  color: #ffffff;
+  background: var(--accent);
 }
 
-
-.glass:hover {
-  background: rgba(255, 255, 255, 0.365);
-  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.392),
-    inset 0 6px 30px rgba(255, 255, 255, 0.3);
-  color:rgb(255, 255, 255);
-  transition-duration: 400ms;
-}
-
-.glass::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.045);
-  border-radius: 2rem;
-  backdrop-filter: blur(1px);
-  box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 0.419),
-    inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
-  opacity: 0.6;
-  z-index: -1;
-  filter: blur(1px) drop-shadow(10px 4px 6px rgba(255, 255, 254, 0.085))
-    brightness(115%);
-}
-
-@media(min-width: 640px){
-
-
-.glassPopup {
-  position: relative;
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.305);
-  border-radius: 2rem;
-  box-shadow: 0 8px 32px rgba(250, 250, 250, 0.06),
-    inset 0 4px 20px rgba(255, 255, 255, 0.049);
-  input:focus, textarea:focus {
-    outline: none;
-    border-color: #ffffff; /* Amber-400 */
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
-    transition-duration: 400ms;
-  }
-}
-
-.glass::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(237, 231, 231, 0.035);
-  border-radius: 2rem;
-  backdrop-filter: blur(1px);
-  box-shadow: inset -10px -8px 0px -11px rgb(252, 252, 252),
-    inset 0px -9px 0px -8px rgb(253, 253, 253);
-  opacity: 0.3;
-  z-index: -1;
-  filter: blur(1px) drop-shadow(10px 4px 6px rgba(255, 255, 255, 0.457))
-    brightness(115%);
-}
-}
-
+.glass,
+.glassPopup,
 .glassInput {
   position: relative;
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.305);
-  border-radius: 2rem;
-  box-shadow: 0 8px 32px rgba(250, 250, 250, 0.06),
-    inset 0 4px 20px rgba(255, 255, 255, 0.049);
-  input:focus, textarea:focus {
-    outline: none;
-    border-color: #ffffff; /* Amber-400 */
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
-    transition-duration: 400ms;
-  }
+  color: var(--foreground);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(18px) saturate(150%);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background-color 220ms ease;
 }
 
-.glassInput::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(237, 231, 231, 0.035);
-  border-radius: 2rem;
-  backdrop-filter: blur(1px);
-  box-shadow: inset -10px -8px 0px -11px rgb(252, 252, 252),
-    inset 0px -9px 0px -8px rgb(253, 253, 253);
-  opacity: 0.3;
-  z-index: -1;
-  filter: blur(1px) drop-shadow(10px 4px 6px rgba(255, 255, 255, 0.457))
-    brightness(115%);
+.glass:hover,
+.glassPopup:hover {
+  border-color: rgba(37, 99, 235, 0.24);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+.glass:focus-visible,
+.glassPopup:focus-visible,
+.glassInput:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.24);
+  outline-offset: 3px;
+}
+
+input,
+textarea {
+  color: var(--foreground);
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--line);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #94a3b8;
 }

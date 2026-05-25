@@ -26,11 +26,11 @@ const NavbarMobile = () => {
   }
 
   return (
-    <div className="backdrop-blur-xl fixed left-0 w-full z-50 py-3">
-      <div className=" flex justify-between">
-        <div className="px-3 text-xl">ArtStyles</div>
+    <div className="fixed left-0 z-50 w-full border-b border-slate-200/80 bg-white/85 py-3 shadow-sm backdrop-blur-xl">
+      <div className="flex justify-between">
+        <div className="px-5 text-lg font-bold text-slate-950">ArtStyles</div>
         <div>
-            <button onClick={handleClick} className="px-4">
+            <button onClick={handleClick} className="px-5 text-slate-700">
           <Menu />
         </button>
         </div>
@@ -38,7 +38,7 @@ const NavbarMobile = () => {
       </div>
 
       <div
-        className={`px-4 text-2xl font-bold space-y-2 overflow-hidden flex flex-col justify-end items-end transition-all duration-300 ease-in-out ${
+        className={`flex flex-col items-end justify-end space-y-2 overflow-hidden px-5 text-xl font-semibold text-slate-700 transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
         }`}
       >

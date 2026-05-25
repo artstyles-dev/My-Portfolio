@@ -3,13 +3,13 @@ import { FaFacebookF, FaGithub } from "react-icons/fa";
 
 const Social = () => {
   return (
-    <footer className="text-gray-300 py-10 mt-10 text-center border-t border-gray-800">
+    <footer className="mt-10 border-t border-slate-200 py-10 text-center text-slate-500">
       <div className="flex justify-center gap-6 mb-3 text-xl">
         <a
           href="https://www.facebook.com/share/17EfDAsSFt/?mibextid=wwXIfr"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-blue-500 transition-colors duration-200"
+          className="transition-colors duration-200 hover:text-blue-600"
         >
           <FaFacebookF />
         </a>
@@ -17,14 +17,14 @@ const Social = () => {
           href="https://github.com/artstyles-dev"
           target="_blank"
           rel="noopener noreferrer"
-          className="hover:text-gray-400 transition-colors duration-200"
+          className="transition-colors duration-200 hover:text-slate-950"
         >
           <FaGithub />
         </a>
       </div>
       <p className="text-sm">© 2025 ArtStyles. All rights reserved.</p>
       <div
-        className="text-sm text-amber-400 hover:text-amber-500 transition-colors duration-200 block mt-2"
+        className="mt-2 block text-sm text-blue-600 transition-colors duration-200 hover:text-blue-700"
       >
         Tel: 095-776-9560
       </div>

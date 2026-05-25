@@ -7,18 +7,19 @@ import WorkExperience from "../SideThree/WorkExperience";
 const PortfolioM = () => {
   return (
     <div id="portfolio">
-      <h1 className="mt-20 text-3xl font-bold mb-5">Portfolio</h1>
+      <p className="mt-20 mb-6 text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">Portfolio</p>
+      {/* <h1 className="mb-5 mt-2 text-3xl font-bold text-slate-950">ผลงานและประสบการณ์</h1> */}
       <div className="space-y-5">
-        <div className="glass">
+        <div>
           <PcEcom />
         </div>
-        <div className="glass">
+        <div>
           <Restaurants />
         </div>
-        <div className="glass">
+        <div>
           <TodoList />
         </div>
-        <div className="glass">
+        <div>
           <WorkExperience />
         </div>
       </div>

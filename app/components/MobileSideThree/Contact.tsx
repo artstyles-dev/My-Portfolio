@@ -8,12 +8,11 @@ const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
 const toastStyle = {
-  background: "rgba(255, 255, 255, 255)",
-  backdropFilter: "blur(1px) saturate(180%)",
-  borderRadius: "2rem",
-  boxShadow:
-    "0 20px 32px rgba(255, 255, 255, 0.365), inset 0 4px 20px rgba(255,255,255,0.049)",
-  color: "black",
+  background: "rgba(255, 255, 255, 0.96)",
+  border: "1px solid rgba(15, 23, 42, 0.1)",
+  borderRadius: "1rem",
+  boxShadow: "0 20px 50px rgba(15, 23, 42, 0.12)",
+  color: "#111827",
   padding: "1rem 1.5rem",
 };
 
@@ -97,10 +96,11 @@ const Contact = () => {
         }
       };
   return (
-        <div className="h-full my-10 mt-20">
+        <div className="my-10 mt-20 h-full">
       {/* Left: Form */}
       <div className="h-full flex flex-col mb-5">
-        <h1 className="text-3xl font-bold mb-5">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">Contact</p>
+        <h1 className="mb-5 mt-2 text-3xl font-bold text-slate-950">
           Contact Me
         </h1>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -110,7 +110,7 @@ const Contact = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Your Name"
-            className="w-full p-3 px-5 glassInput text-white focus:outline-none"
+            className="w-full rounded-2xl p-3 px-5 text-slate-950 focus:outline-none"
           />
           <input
             type="email"
@@ -118,19 +118,19 @@ const Contact = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Your Email"
-            className="w-full p-3 px-5 glassInput text-white focus:outline-none"
+            className="w-full rounded-2xl p-3 px-5 text-slate-950 focus:outline-none"
           />
           <textarea
             name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             placeholder="Your Message"
-            className="w-full p-5 glassInput text-white h-62 focus:outline-none"
+            className="h-62 w-full rounded-2xl p-5 text-slate-950 focus:outline-none"
           />
           <button
             type="submit"
             disabled={isSending}
-            className="w-full glass font-semibold py-3 disabled:cursor-not-allowed disabled:opacity-60"
+            className="w-full rounded-2xl bg-slate-950 py-3 font-semibold text-white shadow-lg shadow-slate-300 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {isSending ? "Sending..." : "Send Message"}
           </button>

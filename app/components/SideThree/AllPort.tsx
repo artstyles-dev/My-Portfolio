@@ -16,7 +16,7 @@ const AllPort = () => {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <div className="w-100 overflow-hidden p-4 md:w-full md:p-8">
+    <div className="mx-auto w-full max-w-md overflow-hidden px-0 pb-2 md:max-w-xl">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -29,11 +29,11 @@ const AllPort = () => {
         }}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
-        className="w-full max-w-md overflow-hidden rounded-xl pb-10"
+        className="w-full overflow-hidden rounded-xl pb-10"
         style={
           {
-            "--swiper-navigation-color": "#fff",
-            "--swiper-pagination-color": "#fff",
+            "--swiper-navigation-color": "#2563eb",
+            "--swiper-pagination-color": "#2563eb",
           } as React.CSSProperties
         }
         slidesPerView={1}
@@ -54,13 +54,13 @@ const AllPort = () => {
       </Swiper>
       <div className="mt-6 flex justify-center gap-4">
         <button
-          className="glass px-4 py-2 font-semibold"
+          className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm transition hover:border-blue-200 hover:text-blue-600"
           onClick={() => swiperRef.current?.slidePrev()}
         >
           Prev
         </button>
         <button
-          className="glass px-4 py-2 font-semibold"
+          className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm transition hover:border-blue-200 hover:text-blue-600"
           onClick={() => swiperRef.current?.slideNext()}
         >
           Next

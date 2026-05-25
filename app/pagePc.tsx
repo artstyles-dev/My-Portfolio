@@ -11,15 +11,15 @@ const PagePc = () => {
     const [activePage, setActivePage] = useState("home");
 
   return (
-    <div className="h-full flex justify-center items-center">
-      <div className="h-full flex">
+    <div className="h-full w-full flex justify-center items-center">
+      <div className="h-full w-full flex">
         <Navbar activePage={activePage} setActivePage={setActivePage} />
-        <div className="flex justify-center items-center">
+        <main className="flex h-full w-full justify-center items-center px-8 pt-24">
           {activePage === "home" && <Home />}
           {activePage === "skills" && <AboutmeSkill />}
           {activePage === "portfolio" && <Portfolio />}
           {activePage === "contact" && <Contact />}
-        </div>
+        </main>
       </div>
     </div>
   );

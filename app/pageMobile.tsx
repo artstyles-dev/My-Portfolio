@@ -7,7 +7,7 @@ import PortfolioMobile from './Mobile/portfolioMobile'
 
 const PageMobile = () => {
   return (
-    <div className='text-white w-screen mx-0 px-5'>
+    <div className='w-full px-5 text-slate-950'>
       <NavbarMobile />
       <HomeMobile />
       <AboutmeMobile />

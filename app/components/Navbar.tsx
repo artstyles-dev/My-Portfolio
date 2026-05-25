@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "motion/react";
 import React from "react";
 
 interface NavProps {
@@ -16,21 +15,21 @@ const Navbar = ({ activePage, setActivePage }: NavProps) => {
   ];
 
   return (
-    <div className="fixed left-0 w-full z-50 py-5 bg-transparent">
+    <div className="fixed left-0 top-0 z-50 w-full px-6 py-5">
       <div className="flex justify-center items-center">
-        <div className="flex gap-10 text-white">
+        <div className="flex rounded-full border border-slate-200/80 bg-white/80 p-1 text-sm font-medium text-slate-500 shadow-lg shadow-slate-200/60 backdrop-blur-xl">
           {menuItems.map((item) => (
-            <div
+            <button
               key={item.page}
               onClick={() => setActivePage(item.page)}
-              className={`cursor-pointer pb-1 transition-all duration-300 ${
+              className={`rounded-full px-5 py-2 transition-all duration-300 ${
                 activePage === item.page
-                  ? "text-2xl"
-                  : "text-gray-400 hover:text-white hover:text-2xl"
+                  ? "bg-slate-950 text-white shadow-md shadow-slate-300/60"
+                  : "hover:bg-slate-100 hover:text-slate-950"
               }`}
             >
               {item.label}
-            </div>
+            </button>
           ))}
         </div>
       </div>
