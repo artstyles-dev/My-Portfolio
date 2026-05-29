@@ -78,7 +78,7 @@ const dictionaries: Record<Language, Dictionary> = {
       portfolio: "ผลงาน",
       contact: "ติดต่อ",
       social: "ช่องทาง",
-      contactTitle: "ติดต่อ",
+      contactTitle: "ผ่านทางอีเมล",
       socialTitle: "ช่องทางติดต่อ",
     },
     contact: {
@@ -145,7 +145,7 @@ const dictionaries: Record<Language, Dictionary> = {
       portfolio: "Portfolio",
       contact: "Contact",
       social: "Social",
-      contactTitle: "Contact Me",
+      contactTitle: "By Email",
       socialTitle: "Get in Touch",
     },
     contact: {

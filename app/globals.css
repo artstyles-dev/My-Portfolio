@@ -1,13 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f8fb;
+  --background: #f5f7fb;
   --foreground: #111827;
-  --muted: #64748b;
   --line: rgba(15, 23, 42, 0.1);
   --card: rgba(255, 255, 255, 0.78);
   --accent: #2563eb;
-  --accent-soft: #dbeafe;
+  --accent-two: #0f766e;
 }
 
 * {
@@ -23,8 +22,8 @@ body {
   margin: 0;
   color: var(--foreground);
   background:
-    linear-gradient(135deg, rgba(37, 99, 235, 0.1), transparent 32%),
-    linear-gradient(315deg, rgba(20, 184, 166, 0.1), transparent 30%),
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 30rem),
+    radial-gradient(circle at bottom right, rgba(15, 118, 110, 0.16), transparent 28rem),
     var(--background);
   font-feature-settings: "kern";
 }
@@ -60,6 +59,105 @@ a {
 .glassPopup:hover {
   border-color: rgba(37, 99, 235, 0.24);
   box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+.portfolio-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.portfolio-shell::before {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  content: "";
+  background:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.38)),
+    radial-gradient(circle at 18% 18%, rgba(37, 99, 235, 0.22), transparent 18rem),
+    radial-gradient(circle at 82% 22%, rgba(245, 158, 11, 0.16), transparent 16rem),
+    radial-gradient(circle at 72% 82%, rgba(15, 118, 110, 0.18), transparent 20rem);
+}
+
+.portfolio-shell::after {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  content: "";
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.055) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(circle at 50% 42%, black, transparent 72%);
+}
+
+.hero-orbit {
+  position: absolute;
+  inset: -8%;
+  border: 1px solid rgba(235, 232, 37, 0.14);
+  border-radius: 9999px;
+  animation: orbit-spin 18s linear infinite;
+}
+
+.hero-orbit::before,
+.hero-orbit::after {
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  content: "";
+  border-radius: 9999px;
+  background: var(--accent);
+  box-shadow: 0 0 24px rgba(37, 99, 235, 0.55);
+}
+
+.hero-orbit::before {
+  top: 12%;
+  left: 19%;
+}
+
+.hero-orbit::after {
+  right: 14%;
+  bottom: 20%;
+  background: var(--accent-two);
+  box-shadow: 0 0 24px rgba(15, 118, 110, 0.5);
+}
+
+.shine-card {
+  overflow: hidden;
+}
+
+.shine-card::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: 0;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.72), transparent);
+  transform: translateX(-120%);
+  transition:
+    opacity 220ms ease,
+    transform 700ms ease;
+}
+
+.shine-card:hover::before {
+  opacity: 1;
+  transform: translateX(120%);
+}
+
+@keyframes orbit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
 .glass:focus-visible,

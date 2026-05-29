@@ -20,7 +20,6 @@ const ContactMe = () => {
           {t.sections.socialTitle}
         </h1>
 
-        {/* Right: Contact Info */}
         <div className="glassPopup p-5 lg:p-10 xl:p-13 2xl:p-15">
           <div className="space-y-10 text-slate-600 md:space-y-5">
             <a

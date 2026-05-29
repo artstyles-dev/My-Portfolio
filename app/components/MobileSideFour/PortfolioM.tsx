@@ -13,7 +13,6 @@ const PortfolioM = () => {
   return (
     <div id="portfolio">
       <p className="mt-20 mb-6 text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">{t.sections.portfolio}</p>
-      {/* <h1 className="mb-5 mt-2 text-3xl font-bold text-slate-950">ผลงานและประสบการณ์</h1> */}
       <div className="space-y-5">
         <div>
           <PcEcom />

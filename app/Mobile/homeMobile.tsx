@@ -7,11 +7,9 @@ const  HomeMobile = () => {
     <div id="home" className="flex justify-center items-center">
       <div className="flex">
         <div className="flex flex-col">
-          {/* Right Side */}
           <div className="text-white">
             <Pic />
           </div>
-          {/* Left Side */}
           <div className="text-white">
             <Hero />
           </div>

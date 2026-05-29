@@ -100,7 +100,6 @@ const InputMe = () => {
 
   return (
     <div className="h-full">
-      {/* Left: Form */}
       <div className="h-full flex flex-col justify-start items-center">
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">{t.sections.contact}</p>
         <h1 className="mb-5 mt-3 text-center text-5xl font-bold text-slate-950 xl:text-6xl">

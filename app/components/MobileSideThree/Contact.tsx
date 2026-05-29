@@ -99,7 +99,6 @@ const Contact = () => {
       };
   return (
         <div className="my-10 mt-20 h-full">
-      {/* Left: Form */}
       <div className="h-full flex flex-col mb-5">
         <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">{t.sections.contact}</p>
         <h1 className="mb-5 mt-2 text-3xl font-bold text-slate-950">

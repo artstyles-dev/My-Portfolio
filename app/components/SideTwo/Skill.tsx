@@ -16,35 +16,38 @@ const Skill = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
+      accent: "from-blue-500 to-cyan-500",
       skills: ["JavaScript", "TypeScript", "HTML", "CSS", "SQL"],
     },
     {
       title: "Frontend Development",
+      accent: "from-teal-500 to-emerald-500",
       skills: ["React.js", "Next.js", "Tailwind CSS", "Bootstrap", "Shadcn UI", "React Native"],
     },
     {
       title: "State Management",
+      accent: "from-amber-500 to-orange-500",
       skills: ["Redux Toolkit", "Zustand"],
     },
     {
       title: "Backend & Databases",
+      accent: "from-slate-700 to-blue-700",
       skills: ["Node.js", "Express.js", "RESTful API", "PostgreSQL", "MySQL", "Supabase"],
     },
     {
       title: "Development Tools",
+      accent: "from-fuchsia-500 to-blue-500",
       skills: ["Git", "GitHub", "Postman", "Figma", "VS Code", "Docker", "ClickUp", "Trello"],
     },
   ];
 
   return (
     <div className="flex min-h-full w-full flex-col items-center justify-center px-6 pb-10 md:px-10">
-      
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-10 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">{t.sections.skills}</p>
-          {/* <h1 className="mt-3 text-2xl font-bold text-slate-950 xl:text-5xl">เครื่องมือที่ใช้สร้างงาน</h1> */}
         </div>
-        
+
         <div className="block lg:hidden w-full">
           <Swiper
             spaceBetween={20}
@@ -66,7 +69,8 @@ const Skill = () => {
           >
             {skillCategories.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="glassPopup flex flex-col h-full min-h-[300px]">
+                <div className="glassPopup shine-card flex h-full min-h-[300px] flex-col">
+                  <div className={`h-1.5 bg-gradient-to-r ${item.accent}`} />
                   <h2 className="border-b border-slate-200 p-4 text-center text-xl font-semibold text-slate-950">
                     {item.title}
                   </h2>
@@ -81,31 +85,30 @@ const Skill = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          
-          {/* ปุ่ม Navigation สำหรับ Mobile */}
+
           <div className="mt-6 flex justify-center gap-4">
-        <button
-          className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm"
-          onClick={() => swiperRef.current?.slidePrev()}
-        >
-          {t.common.prev}
-        </button>
-        <button
-          className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm"
-          onClick={() => swiperRef.current?.slideNext()}
-        >
-          {t.common.next}
-        </button>
-      </div>
+            <button
+              className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm"
+              onClick={() => swiperRef.current?.slidePrev()}
+            >
+              {t.common.prev}
+            </button>
+            <button
+              className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm"
+              onClick={() => swiperRef.current?.slideNext()}
+            >
+              {t.common.next}
+            </button>
+          </div>
         </div>
 
-        {/* --- DESKTOP VIEW: Flex Grid (แสดงเฉพาะจอ md ขึ้นไป) --- */}
         <div className="hidden flex-wrap justify-center gap-5 lg:flex">
           {skillCategories.map((item, index) => (
             <div
               key={index}
-              className="glassPopup flex w-full max-w-[390px] flex-col overflow-hidden sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
+              className="glassPopup shine-card flex w-full max-w-[390px] flex-col overflow-hidden sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)]"
             >
+              <div className={`${item.accent}`} />
               <h2 className="border-b border-slate-200 p-4 text-center text-xl font-semibold text-slate-950 xl:text-2xl">
                 {item.title}
               </h2>
@@ -122,7 +125,6 @@ const Skill = () => {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );
