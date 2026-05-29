@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   FaFacebook,
@@ -5,14 +7,17 @@ import {
   FaEnvelope,
   FaGithub,
 } from "react-icons/fa";
+import { useLanguage } from "../../context/LanguageContext";
 
 const ContactMe = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="flex h-full items-center justify-center">
       <div className="h-full">
-        <p className="text-center text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">Social</p>
+        <p className="text-center text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">{t.sections.social}</p>
         <h1 className="mb-5 mt-3 text-center text-5xl font-bold text-slate-950 xl:text-6xl">
-          Get in Touch
+          {t.sections.socialTitle}
         </h1>
 
         {/* Right: Contact Info */}

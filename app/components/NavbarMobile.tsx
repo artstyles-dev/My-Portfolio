@@ -1,8 +1,11 @@
 import { Menu } from "lucide-react";
 import React, { useState } from "react";
+import LanguageToggle from "./LanguageToggle";
+import { useLanguage } from "../context/LanguageContext";
 
 const NavbarMobile = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useLanguage();
 
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -27,12 +30,13 @@ const NavbarMobile = () => {
 
   return (
     <div className="fixed left-0 z-50 w-full border-b border-slate-200/80 bg-white/85 py-3 shadow-sm backdrop-blur-xl">
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <div className="px-5 text-lg font-bold text-slate-950">ArtStyles</div>
-        <div>
-            <button onClick={handleClick} className="px-5 text-slate-700">
-          <Menu />
-        </button>
+        <div className="flex items-center gap-2 pr-4">
+          <LanguageToggle />
+          <button onClick={handleClick} className="text-slate-700">
+            <Menu />
+          </button>
         </div>
         
       </div>
@@ -42,10 +46,10 @@ const NavbarMobile = () => {
           isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <p onClick={handleHome}>Home</p>
-        <p onClick={handleAbout}>Skills</p>
-        <p onClick={handlePortfolio}>Portfolio</p>
-        <p onClick={handleContact}>Contact</p>
+        <p onClick={handleHome}>{t.nav.home}</p>
+        <p onClick={handleAbout}>{t.nav.skills}</p>
+        <p onClick={handlePortfolio}>{t.nav.portfolio}</p>
+        <p onClick={handleContact}>{t.nav.contact}</p>
       </div>
     </div>
   );

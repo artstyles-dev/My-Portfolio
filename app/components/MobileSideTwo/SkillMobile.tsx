@@ -1,6 +1,10 @@
+"use client";
+
 import React from 'react'
+import { useLanguage } from '../../context/LanguageContext';
 
 const SkillMobile = () => {
+      const { t } = useLanguage();
       const skillCategories = [
     {
       title: "Programming Languages",
@@ -27,7 +31,7 @@ const SkillMobile = () => {
     <div className="h-full">
       <div className="mt-16 flex h-full flex-col">
         <div className="mb-6">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">Skills & Tech</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">{t.sections.skills}</p>
           {/* <h1 className="mt-2 text-3xl font-bold text-slate-950">เครื่องมือที่ใช้สร้างงาน</h1> */}
         </div>
         <div className="grid grid-cols-1 gap-4 min-[430px]:grid-cols-2">

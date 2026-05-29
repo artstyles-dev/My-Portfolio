@@ -6,6 +6,7 @@ import PcEcom from "../components/SideThree/PcEcom";
 import Restaurants from "../components/SideThree/Restaurants";
 import AllPort from "../components/SideThree/AllPort";
 import WorkExperience from "../components/SideThree/WorkExperience";
+import { useLanguage } from "../context/LanguageContext";
 
 const floatUpVariants = {
   hidden: { opacity: 0, y: 10 },
@@ -17,6 +18,8 @@ const floatUpVariants = {
 };
 
 const Portfolio = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="flex min-h-full w-full flex-col items-center justify-center px-6 pb-10 md:px-10">
       <motion.div
@@ -27,7 +30,7 @@ const Portfolio = () => {
       >
         <div className="mb-10 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">
-            Portfolio
+            {t.sections.portfolio}
           </p>
           {/* <h1 className="mt-3 text-2xl font-bold text-slate-950 xl:text-5xl">ผลงานและประสบการณ์</h1> */}
         </div>

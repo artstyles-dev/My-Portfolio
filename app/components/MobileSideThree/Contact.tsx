@@ -2,6 +2,7 @@
 import emailjs from "@emailjs/browser";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import { useLanguage } from "../../context/LanguageContext";
 
 const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -34,6 +35,7 @@ const getEmailJSErrorMessage = (error: unknown) => {
 };
 
 const Contact = () => {
+      const { t } = useLanguage();
       const [name, setName] = useState("");
       const [email, setEmail] = useState("");
       const [message, setMessage] = useState("");
@@ -43,14 +45,14 @@ const Contact = () => {
         e.preventDefault();
     
         if (!name.trim() || !email.trim() || !message.trim()) {
-          toast("กรุณากรอกข้อมูลให้ครบถ้วน", {
+          toast(t.contact.required, {
             style: toastStyle,
           });
           return;
         }
 
         if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
-          toast("ยังไม่ได้ตั้งค่า EmailJS", {
+          toast(t.contact.emailNotConfigured, {
             style: toastStyle,
           });
           return;
@@ -82,13 +84,13 @@ const Contact = () => {
           setEmail("");
           setMessage("");
 
-          toast("ส่งข้อความเรียบร้อยแล้ว", {
+          toast(t.contact.success, {
             style: toastStyle,
           });
         } catch (error) {
           const errorMessage = getEmailJSErrorMessage(error);
           console.error("EmailJS error:", error);
-          toast(`ส่งไม่สำเร็จ: ${errorMessage}`, {
+          toast(`${t.contact.failed}: ${errorMessage}`, {
             style: toastStyle,
           });
         } finally {
@@ -99,9 +101,9 @@ const Contact = () => {
         <div className="my-10 mt-20 h-full">
       {/* Left: Form */}
       <div className="h-full flex flex-col mb-5">
-        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">Contact</p>
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">{t.sections.contact}</p>
         <h1 className="mb-5 mt-2 text-3xl font-bold text-slate-950">
-          Contact Me
+          {t.sections.contactTitle}
         </h1>
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
@@ -109,7 +111,7 @@ const Contact = () => {
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Your Name"
+            placeholder={t.contact.name}
             className="w-full rounded-2xl p-3 px-5 text-slate-950 focus:outline-none"
           />
           <input
@@ -117,14 +119,14 @@ const Contact = () => {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Your Email"
+            placeholder={t.contact.email}
             className="w-full rounded-2xl p-3 px-5 text-slate-950 focus:outline-none"
           />
           <textarea
             name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Your Message"
+            placeholder={t.contact.message}
             className="h-62 w-full rounded-2xl p-5 text-slate-950 focus:outline-none"
           />
           <button
@@ -132,7 +134,7 @@ const Contact = () => {
             disabled={isSending}
             className="w-full rounded-2xl bg-slate-950 py-3 font-semibold text-white shadow-lg shadow-slate-300 disabled:cursor-not-allowed disabled:opacity-60"
           >
-            {isSending ? "Sending..." : "Send Message"}
+            {isSending ? t.contact.sending : t.contact.send}
           </button>
         </form>
       </div>

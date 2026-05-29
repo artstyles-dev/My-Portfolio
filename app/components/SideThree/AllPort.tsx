@@ -11,9 +11,11 @@ import PcEcom from "./PcEcom";
 import Restaurants from "./Restaurants";
 import TodoList from "./TodoList";
 import WorkExperience from "./WorkExperience";
+import { useLanguage } from "../../context/LanguageContext";
 
 const AllPort = () => {
   const swiperRef = useRef<SwiperType | null>(null);
+  const { t } = useLanguage();
 
   return (
     <div className="mx-auto w-full max-w-md overflow-hidden px-0 pb-2 md:max-w-xl">
@@ -57,13 +59,13 @@ const AllPort = () => {
           className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm transition hover:border-blue-200 hover:text-blue-600"
           onClick={() => swiperRef.current?.slidePrev()}
         >
-          Prev
+          {t.common.prev}
         </button>
         <button
           className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm transition hover:border-blue-200 hover:text-blue-600"
           onClick={() => swiperRef.current?.slideNext()}
         >
-          Next
+          {t.common.next}
         </button>
       </div>
     </div>

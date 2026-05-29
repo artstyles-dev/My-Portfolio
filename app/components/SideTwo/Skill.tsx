@@ -7,9 +7,11 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { useLanguage } from "../../context/LanguageContext";
 
 const Skill = () => {
   const swiperRef = useRef<SwiperType | null>(null);
+  const { t } = useLanguage();
 
   const skillCategories = [
     {
@@ -39,7 +41,7 @@ const Skill = () => {
       
       <div className="mx-auto w-full max-w-6xl">
         <div className="mb-10 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">Skills & Tech</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">{t.sections.skills}</p>
           {/* <h1 className="mt-3 text-2xl font-bold text-slate-950 xl:text-5xl">เครื่องมือที่ใช้สร้างงาน</h1> */}
         </div>
         
@@ -86,13 +88,13 @@ const Skill = () => {
           className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm"
           onClick={() => swiperRef.current?.slidePrev()}
         >
-          Prev
+          {t.common.prev}
         </button>
         <button
           className="rounded-full border border-slate-200 bg-white px-4 py-2 font-semibold text-slate-700 shadow-sm"
           onClick={() => swiperRef.current?.slideNext()}
         >
-          Next
+          {t.common.next}
         </button>
       </div>
         </div>
